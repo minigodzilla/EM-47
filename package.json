@@ -1,0 +1,37 @@
+{
+  "name": "minigodzilla-boilerplate",
+  "version": "1.0.0",
+  "description": "Web dev boilerplate with SASS, Bootstrap 4, Gulp",
+  "author": "",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "prod": "cross-env NODE_ENV=prod gulp"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.5.0",
+    "browser-sync": "^2.26.7",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^2.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-html-partial": "^1.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-js-import": "^1.0.6",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "owl.carousel": "^2.3.4"
+  },
+  "dependencies": {
+    "gulp-google-webfonts": "^2.1.0"
+  }
+}
