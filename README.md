@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-Below instructions will help you get a copy of the project up and running on your local machine for starting multipage html development.
+Below instructions will help you get a copy of the project up and running on your local machine for development.
 
 ### Prerequisites
 
@@ -29,7 +29,7 @@ $ npm install
 
 ### Build
 
-Build for generating pure css/js/fonts/html files in public folder, which is the one to deploy
+Build for generating css/js files in assets folder
 
 ```
 $ npm run build
