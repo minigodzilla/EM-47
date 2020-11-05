@@ -69,6 +69,7 @@ function browserSyncReload(done) {
 
 
 function watchFiles() {
+    gulp.watch('*.html', gulp.series(browserSyncReload));
     gulp.watch('assets/sass/*.scss', gulp.series(css, browserSyncReload));
     gulp.watch('assets/scripts/*.js', gulp.series(js, browserSyncReload));
 

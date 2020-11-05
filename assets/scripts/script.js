@@ -222,10 +222,22 @@ $(function()
 		});
 	};
 
+	function stickyNav() {
+
+		new ScrollMagic.Scene
+		({
+			triggerElement: 'body', triggerHook: 0, offset: 60
+		})
+		.setClassToggle('.oj-navbar', 'oj-shown')
+		.addTo(controller);
+
+	}
+
 	// Create an instance of the Scroll Magic Controller
 	let controller = new ScrollMagic.Controller();
 
 	lazyLoad();
+	stickyNav();
 
 	$('.ec-animated-section').each(function () {
 
