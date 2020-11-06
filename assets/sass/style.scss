@@ -1,4 +1,27 @@
 //
+// overriding a few bootstrap variables
+
+$grid-columns:      12;
+$grid-gutter-width: 1em;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+  );
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1296px
+);
+
+//
 // imports
 
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -68,7 +91,7 @@ html {
 
 body {
 	font-family: 'Helvetica Neue',sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.5;
 	color: #000;
@@ -293,7 +316,7 @@ main {
 
 @include media-breakpoint-up(xl) {
 	.container {
-		max-width: 1310px;
+		//max-width: 1310px;
 	}
 }
 
