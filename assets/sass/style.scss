@@ -314,6 +314,49 @@ main {
 	}
 }
 
+.oj-scroller {
+	height: 25em;
+	margin-top: 10em;
+	background-attachment: fixed;
+	background-image: url('../img/bg.svg');
+	background-size: 90em;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+
+	.oj-img-col {
+		padding-left: 3em;
+		margin-top: -4em;
+	}
+}
+
+.oj-come-home {
+	margin-top: 5em;
+
+	.oj-heading-col {
+		display: flex;
+		flex-direction: column;
+
+		.oj-heading {
+		}
+
+		.oj-btn {
+			margin-top: auto;
+		}
+	}
+
+	.oj-copy-col {
+		padding-left: 2em;
+
+		.oj-copy {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+//////////////////////////
+
+
 .ec-hero {
 	background-color: #F4A402;
 	position: relative;
