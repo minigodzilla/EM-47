@@ -247,47 +247,72 @@ main {
 	margin-top: 55px;
 }
 
-.oj-the-new-hamilton {
+.oj-heading {
+	font-family: 'Bebas Neue',sans-serif;
+	font-size: 6em;
+	font-weight: 400;
+	line-height: 1.325;
 
-	margin-top: 5em;
+	span {
+		display: block;
 
-	.oj-heading {
-		font-family: 'Bebas Neue',sans-serif;
-		font-size: 6em;
-		font-weight: 400;
-		line-height: 1.325;
-
-		span {
-			display: block;
-
-			&.oj-accent {
-				color: #FA213E;
-			}
+		&.oj-accent {
+			color: #FA213E;
 		}
 	}
+}
 
-	.oj-copy {
-		font-size: 1.9em;
-		line-height: 1.6;
-		margin-top: 0.25em;
-		margin-bottom: 1em;
-	}
+.oj-copy {
+	font-size: 1.9em;
+	line-height: 1.65;
+	margin-top: 0.325em;
+	margin-bottom: 1em;
+}
 
-	.oj-btn {
-		display: inline-block;
-		font-family: 'Bebas Neue',sans-serif;
-		font-size: 4em;
-		font-weight: 400;
-		line-height: 1.6;
-		color: inherit;
-		text-decoration: underline;
-	}
+.oj-btn {
+	display: inline-block;
+	font-family: 'Bebas Neue',sans-serif;
+	font-size: 4em;
+	font-weight: 400;
+	line-height: 1.325;
+	color: inherit;
+	text-decoration: underline;
+}
+
+.oj-the-new-hamilton {
+	margin-top: 5em;
 }
 
 .oj-home-to-hero {
 	margin-top: -1.5em;
 }
 
+.oj-home-to {
+	margin-top: 5em;
+
+	.oj-heading-col {
+		display: flex;
+		flex-direction: column;
+		padding-left: 3em;
+
+		.oj-heading {
+			font-size: 4em;
+			line-height: 1;
+		}
+
+		.oj-btn {
+			margin-top: auto;
+		}
+	}
+
+	.oj-copy-col {
+		padding-right: 3em;
+
+		.oj-copy {
+			margin-bottom: 0;
+		}
+	}
+}
 
 .ec-hero {
 	background-color: #F4A402;
