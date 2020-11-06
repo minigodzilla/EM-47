@@ -2,7 +2,7 @@
 // overriding a few bootstrap variables
 
 $grid-columns:      12;
-$grid-gutter-width: 1em;
+$grid-gutter-width: 2em;
 
 $grid-breakpoints: (
   xs: 0,
@@ -82,8 +82,9 @@ $container-max-widths: (
 	}
 }
 
+
 //
-// element and form control overrides
+// global style rules incl. form controls and buttons
 
 html {
 	scroll-behavior: smooth;
@@ -129,6 +130,11 @@ h6 {
 	margin-bottom: 1rem;
 }
 
+.oj-img ,
+.oj-svg {
+	width: 100%;
+}
+
 .form-control {
 	border-color: #000;
 	border-radius: 0;
@@ -162,6 +168,10 @@ h6 {
 	}
 }
 
+
+//
+// navbar
+
 .oj-navbar {
 	padding: 0;
 	display: flex;
@@ -187,16 +197,8 @@ h6 {
 	.navbar-brand {
 		margin: 0 auto;
 		padding: 0;
-
-		@include media-breakpoint-down(sm) {
-			width: 150px;
-			height: 40px;
-		}
-
-		@include media-breakpoint-up(md) {
-			width: 150px;
-			height: 40px;
-		}
+		width: 150px;
+		height: 40px;
 
 		.oj-svg {
 			width: 100%;
@@ -243,29 +245,47 @@ main {
 
 .oj-hero {
 	margin-top: 55px;
-
-	img {
-		width: 100%;
-	}
 }
 
 .oj-the-new-hamilton {
-	margin-top: 55px;
-	h1 {
+
+	margin-top: 5em;
+
+	.oj-heading {
 		font-family: 'Bebas Neue',sans-serif;
 		font-size: 6em;
 		font-weight: 400;
-		line-height: 1.4;
+		line-height: 1.325;
 
 		span {
 			display: block;
+
+			&.oj-accent {
+				color: #FA213E;
+			}
 		}
 	}
 
-	p {
-		font-size: 2em;
-		line-height: 1.75;
+	.oj-copy {
+		font-size: 1.9em;
+		line-height: 1.6;
+		margin-top: 0.25em;
+		margin-bottom: 1em;
 	}
+
+	.oj-btn {
+		display: inline-block;
+		font-family: 'Bebas Neue',sans-serif;
+		font-size: 4em;
+		font-weight: 400;
+		line-height: 1.6;
+		color: inherit;
+		text-decoration: underline;
+	}
+}
+
+.oj-home-to-hero {
+	margin-top: -1.5em;
 }
 
 
