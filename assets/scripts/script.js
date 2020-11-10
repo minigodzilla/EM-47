@@ -59,6 +59,16 @@ $(function()
 
 $(function()
 {
+
+	$('.oj-form-toggle-option').on('click', function() {
+
+		var value = $(this).attr('data-value');
+
+		$('.oj-form-toggle-input').attr('value', value);
+
+	})
+
+
 	////////////////////////////////////////////////////////////////////////////////
 
 	var $form              = $('#ec-register-form');

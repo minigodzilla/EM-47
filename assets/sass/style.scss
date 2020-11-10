@@ -119,6 +119,10 @@ body {
 	}
 }
 
+a {
+	color: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -153,8 +157,8 @@ h6 {
 	}
 }
 
-.btn,
-.btn:hover {
+.oj-btn,
+.oj-btn:hover {
 	background-color: transparent;
 	border-color: transparent;
 	border-radius: 0;
@@ -276,6 +280,12 @@ main {
 	line-height: 1.325;
 	color: inherit;
 	text-decoration: underline;
+	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+		color: #FA213E;
+	}
 }
 
 .oj-the-new-hamilton {
@@ -436,7 +446,7 @@ main {
 		margin-top: 20em;
 
 		.oj-heading {
-			font-size: 4.5em;
+			font-size: 4em;
 			text-align: center;
 			margin-bottom: 0.5em;
 		}
@@ -444,6 +454,127 @@ main {
 		.oj-img {
 			margin-bottom: 6em;
 		}
+
+		.form-control {
+			font-family: 'Bebas Neue',sans-serif;
+			font-size: 4em;
+			font-weight: 400;
+			height: 1em;
+			line-height: 1.325;
+			color: inherit;
+			margin: 0;
+			padding: 0;
+			border: 0 none;
+			outline: none;
+			box-shadow: none;
+			text-align: center;
+			transition: color ease 200ms;
+
+			&::placeholder {
+				color: #d5d5d5;
+				transition: color ease 200ms;
+			}
+
+			&:focus::placeholder {
+				//color: #FA213E;
+			}
+		}
+
+		.oj-form-toggle {
+			text-align: center;
+
+			.oj-form-toggle-label {
+				font-family: 'Bebas Neue',sans-serif;
+				font-size: 2.5em;
+				font-weight: 400;
+				line-height: 1.325;
+				text-align: center;
+			}
+
+			.oj-form-toggle-option {
+				display: inline-block;
+				margin: 0 0.1em;
+				font-family: 'Bebas Neue',sans-serif;
+				font-size: 4em;
+				font-weight: 400;
+				line-height: 1.325;
+				text-align: center;
+				color: #D5D5D5;
+				transition: color ease 200ms;
+				cursor: pointer;
+			}
+
+			.oj-form-toggle-input[value='true'] ~ .oj-yes,
+			.oj-form-toggle-input[value='false'] ~ .oj-no {
+				color: #FA213E;
+			}
+		}
+
+		.form-check {
+			margin: 2em 5.9em;
+			position: relative;
+
+			.form-check-input {
+				appearance: none;
+				position: absolute;
+				width: 2.5em;
+				height: 2.5em;
+				border: 1px solid #D5D5D5;
+				outline: none;
+
+				&:focus {
+					border-color: #000;
+				}
+
+				&:checked::before {
+					content: '';
+					position: absolute;
+					width: 30%;
+					height: 50%;
+					transform: translate(-50%,-65%) rotate(45deg);
+					border: solid #FA213E;
+					border-width: 0 0.2em 0.2em 0;
+					left: 50%;
+					top: 50%;
+				}
+			}
+
+			.form-check-label {
+				margin: 0 0 0 2.25em;
+				font-size: 1.1em;
+				line-height: 1.4;
+			}
+		}
+	}
+}
+
+.oj-footer {
+	background-color: #000;
+	color: #fff;
+	font-family: 'helvetica neue',sans-serif;
+	font-size: 1.15em;
+	font-weight: 300;
+
+	a {
+		transition: color 200ms ease;
+
+		.oj-svg {
+			fill: #fff;
+			transition: fill 200ms ease;
+		}
+
+		&:hover {
+			color: #CCAD5D;
+			text-decoration: none;
+
+			.oj-svg {
+				fill: #CCAD5D;
+			}
+		}
+	}
+
+	.oj-logo .oj-svg {
+		width: 7em;
 	}
 }
 
