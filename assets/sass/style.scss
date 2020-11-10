@@ -215,7 +215,6 @@ h6 {
 
 main {
 	overflow-x: hidden;
-	padding-bottom: 2000px;
 }
 
 
@@ -315,17 +314,31 @@ main {
 }
 
 .oj-scroller {
-	height: 25em;
-	margin-top: 10em;
 	background-attachment: fixed;
 	background-image: url('../img/bg.svg');
-	background-size: 90em;
+	background-size: 100vw;
 	background-position: 50% 0;
 	background-repeat: no-repeat;
 
-	.oj-img-col {
-		padding-left: 3em;
-		margin-top: -4em;
+	&.oj-scroller-1 {
+		height: 25em;
+		margin-top: 10em;
+
+		.oj-img-col {
+			padding-left: 3em;
+			margin-top: -4em;
+		}
+	}
+
+	&.oj-scroller-2 {
+		height: 33em;
+		margin-top: -3em;
+		margin-bottom: -10em;
+	}
+
+	&.oj-scroller-3 {
+		height: 25em;
+		margin-top: -19em;
 	}
 }
 
@@ -349,6 +362,87 @@ main {
 
 		.oj-copy {
 			margin-bottom: 0;
+		}
+	}
+}
+
+.oj-visit-hamilton {
+	margin-top: 5em;
+
+	.oj-img-col {
+		margin-top: 6em;
+		padding-right: 3em;
+	}
+
+	.oj-copy-col {
+		margin-top: 5em;
+		padding-left: 5em;
+
+		.oj-copy {
+			line-height: 1.55;
+		}
+
+		.oj-heading {
+			line-height: 1;
+		}
+	}
+}
+
+.oj-easy-connections-1 {
+
+	.oj-heading-col {
+		margin-top: 20em;
+
+		.oj-heading {
+			line-height: 1.3;
+		}
+	}
+	.oj-copy-col {
+		padding-left: 4em;
+
+		.oj-img {
+			margin-bottom: 5em;
+		}
+
+		.oj-copy {
+			margin-bottom: 3em;
+		}
+	}
+}
+
+.oj-easy-connections-2 {
+	margin-top: 5em;
+
+	.oj-copy-col {
+		padding-right: 7em;
+
+		.oj-img {
+			margin-top: 3em;
+			margin-left: -8em;
+			width: calc(100% + 8em)
+		}
+	}
+}
+
+.oj-register {
+	height: 100vw;
+	background-attachment: scroll, fixed;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1300 1300'%3E%3Cpath fill='%23fff' d='m0 0v1300h1300v-1300zm139.2 352.5 265.7-152.5v91.8l-265.7 152.5zm265.7 745.7h-85.7v-655l85.6-49.2zm278.2 1.8v-89.2c123.7 0 223.9-100.3 223.9-223.9h89.2c0 172.9-140.2 313.1-313.1 313.1zm313.1-439.9-89.2-25.3v-434.8h89.2z'/%3E%3C/svg%3E%0A"), url('../img/bg.svg');
+	background-size: 100vw;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+
+	.oj-form-col {
+		margin-top: 20em;
+
+		.oj-heading {
+			font-size: 4.5em;
+			text-align: center;
+			margin-bottom: 0.5em;
+		}
+
+		.oj-img {
+			margin-bottom: 6em;
 		}
 	}
 }
