@@ -287,10 +287,6 @@ main {
 			font-size: 1.1em;
 			font-weight: 700;
 			line-height: 1;
-
-			@include media-breakpoint-down(sm) {
-				display: none;
-			}
 		}
 
 		.oj-logomark {
@@ -691,18 +687,32 @@ main .oj-btn {
 		}
 
 		.oj-heading {
-			font-size: 4em;
 			text-align: center;
 			margin-bottom: 0.5em;
+
+			@include media-breakpoint-down(sm) {
+				font-size: 3em;
+			}
+
+			@include media-breakpoint-up(md) {
+				font-size: 4em;
+			}
 		}
 
 		.oj-img {
-			margin-bottom: 6em;
+
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 2em;
+				width: 16em;
+			}
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: 6em;
+			}
 		}
 
 		.form-control {
 			font-family: 'Bebas Neue',sans-serif;
-			font-size: 4em;
 			font-weight: 400;
 			height: 1em;
 			line-height: 1.325;
@@ -715,13 +725,17 @@ main .oj-btn {
 			text-align: center;
 			transition: color ease 200ms;
 
+			@include media-breakpoint-down(sm) {
+				font-size: 3em;
+			}
+
+			@include media-breakpoint-up(md) {
+				font-size: 4em;
+			}
+
 			&::placeholder {
 				color: #d5d5d5;
 				transition: color ease 200ms;
-			}
-
-			&:focus::placeholder {
-				//color: #FA213E;
 			}
 		}
 
@@ -730,23 +744,37 @@ main .oj-btn {
 
 			.oj-form-toggle-label {
 				font-family: 'Bebas Neue',sans-serif;
-				font-size: 2.5em;
 				font-weight: 400;
 				line-height: 1.325;
 				text-align: center;
+
+				@include media-breakpoint-down(sm) {
+					font-size: 2em;
+				}
+
+				@include media-breakpoint-up(md) {
+					font-size: 2.5em;
+				}
 			}
 
 			.oj-form-toggle-option {
 				display: inline-block;
 				margin: 0 0.1em;
 				font-family: 'Bebas Neue',sans-serif;
-				font-size: 4em;
 				font-weight: 400;
 				line-height: 1.325;
 				text-align: center;
 				color: #D5D5D5;
 				transition: color ease 200ms;
 				cursor: pointer;
+
+				@include media-breakpoint-down(sm) {
+					font-size: 3em;
+				}
+
+				@include media-breakpoint-up(md) {
+					font-size: 4em;
+				}
 			}
 
 			.oj-form-toggle-input[value='true'] ~ .oj-yes,
@@ -756,16 +784,31 @@ main .oj-btn {
 		}
 
 		.form-check {
-			margin: 2em 5.9em;
 			position: relative;
+
+			@include media-breakpoint-down(sm) {
+				margin: 1em 1em;
+			}
+
+			@include media-breakpoint-up(md) {
+				margin: 2em 5.9em;
+			}
 
 			.form-check-input {
 				appearance: none;
 				position: absolute;
-				width: 2.5em;
-				height: 2.5em;
 				border: 1px solid #D5D5D5;
 				outline: none;
+
+				@include media-breakpoint-down(sm) {
+					width: 2em;
+					height: 2em;
+				}
+
+				@include media-breakpoint-up(md) {
+					width: 2.5em;
+					height: 2.5em;
+				}
 
 				&:focus {
 					border-color: #000;
@@ -785,9 +828,23 @@ main .oj-btn {
 			}
 
 			.form-check-label {
-				margin: 0 0 0 2.25em;
-				font-size: 1.1em;
 				line-height: 1.4;
+
+				@include media-breakpoint-down(sm) {
+					font-size: 0.9em;
+					margin: 0.125em 0 0 1.75em;
+				}
+
+				@include media-breakpoint-up(md) {
+					font-size: 1.1em;
+					margin: 0 0 0 2.25em;
+				}
+			}
+		}
+		.oj-btn {
+
+			@include media-breakpoint-down(sm) {
+				font-size: 3em;
 			}
 		}
 	}
@@ -841,6 +898,10 @@ main .oj-btn {
 	}
 
 	.oj-newsletter-col {
+
+		@include media-breakpoint-down(sm) {
+			margin-top: 2em;
+		}
 
 		.oj-heading {
 			margin-bottom: 0.5em;
