@@ -2,7 +2,7 @@
 // overriding a few bootstrap variables
 
 $grid-columns:      12;
-$grid-gutter-width: 2em;
+$grid-gutter-width: 4em;
 
 $grid-breakpoints: (
   xs: 0,
@@ -17,7 +17,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px,
+  xl: 1170px,
   xxl: 1296px
 );
 
@@ -255,7 +255,14 @@ main {
 // main section-specific styling
 
 .oj-header {
-	margin-top: 55px;
+
+	@include media-breakpoint-down(sm) {
+		margin-top: 0.75em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: 55px;
+	}
 
 	.container {
 		display: flex;
@@ -264,22 +271,46 @@ main {
 
 		.oj-logotype {
 			margin-right: auto;
+
+			@include media-breakpoint-down(sm) {
+				width: 9.375em;
+			}
+
+			@include media-breakpoint-up(md) {
+				width: 20em;
+			}
 		}
 
 		.oj-slogan {
-			margin: 32px 40px 0 0;
-			font-size: 18px;
+			margin: 2em 2.25em 0 0;
+			font-family: 'helvetica neue',sans-serif;
+			font-size: 1.1em;
 			font-weight: 700;
 			line-height: 1;
+
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+
+		.oj-logomark {
+			width: 4em;
 		}
 	}
 }
 
 main .oj-heading {
 	font-family: 'Bebas Neue',sans-serif;
-	font-size: 6em;
 	font-weight: 400;
 	line-height: 1.325;
+
+	@include media-breakpoint-down(sm) {
+		font-size: 3em;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: 6em;
+	}
 
 	span {
 		display: block;
@@ -291,21 +322,36 @@ main .oj-heading {
 }
 
 main .oj-copy {
-	font-size: 1.9em;
 	line-height: 1.65;
 	margin-top: 0.325em;
 	margin-bottom: 1em;
+
+	@include media-breakpoint-down(sm) {
+		font-size: 1em;
+		hyphens: auto;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: 1.9em;
+	}
 }
 
 main .oj-btn {
 	display: inline-block;
 	font-family: 'Bebas Neue',sans-serif;
-	font-size: 4em;
 	font-weight: 400;
 	line-height: 1.325;
 	color: inherit;
 	text-decoration: underline;
 	cursor: pointer;
+
+	@include media-breakpoint-down(sm) {
+		font-size: 2em;
+	}
+
+	@include media-breakpoint-up(md) {
+		font-size: 4em;
+	}
 
 	&:hover {
 		text-decoration: underline;
@@ -314,7 +360,14 @@ main .oj-btn {
 }
 
 .oj-hero {
-	margin-top: 55px;
+
+	@include media-breakpoint-down(sm) {
+		margin-top: 0.75em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: 3.5em;
+	}
 
 	.oj-video {
 		width: 100%;
@@ -322,24 +375,51 @@ main .oj-btn {
 }
 
 .oj-the-new-hamilton {
-	margin-top: 5em;
+
+	@include media-breakpoint-down(sm) {
+		margin-top: 2em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: 5em;
+	}
 }
 
 .oj-home-to-hero {
-	margin-top: -1.5em;
+
+	@include media-breakpoint-down(sm) {
+		margin-top: 2em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: -1.5em;
+	}
 }
 
 .oj-home-to {
-	margin-top: 5em;
+
+	@include media-breakpoint-down(sm) {
+		margin-top: 2em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: 5em;
+	}
 
 	.oj-heading-col {
 		display: flex;
 		flex-direction: column;
-		padding-left: 3em;
+
+		@include media-breakpoint-up(md) {
+			padding-left: 3em;
+		}
 
 		.oj-heading {
-			font-size: 4em;
-			line-height: 1;
+
+			@include media-breakpoint-up(md) {
+				font-size: 4em;
+				line-height: 1;
+			}
 		}
 
 		.oj-btn {
@@ -351,7 +431,10 @@ main .oj-btn {
 		padding-right: 3em;
 
 		.oj-copy {
-			margin-bottom: 0;
+
+			@include media-breakpoint-up(md) {
+				margin-top: 0;
+			}
 		}
 	}
 }
@@ -361,32 +444,72 @@ main .oj-btn {
 	background-image: url('../img/bg.svg');
 	background-size: 100vw;
 	background-position: 50% 0;
-	background-repeat: no-repeat;
+	
+	@include media-breakpoint-down(sm) {
+		background-repeat: repeat-y;
+	}
+
+	@include media-breakpoint-up(md) {
+		background-repeat: no-repeat;
+	}
 
 	&.oj-scroller-1 {
-		height: 25em;
-		margin-top: 10em;
+
+		@include media-breakpoint-down(sm) {
+			height: 8em;
+			margin-top: 4em;
+		}
+
+		@include media-breakpoint-up(md) {
+			height: 25em;
+			margin-top: 10em;
+		}
 
 		.oj-img-col {
-			padding-left: 3em;
-			margin-top: -4em;
+
+			@include media-breakpoint-down(sm) {
+				margin-top: -2em;
+			}
+
+			@include media-breakpoint-up(md) {
+				padding-left: 3em;
+				margin-top: -4em;
+			}
 		}
 	}
 
 	&.oj-scroller-2 {
-		height: 33em;
-		margin-top: -3em;
-		margin-bottom: -10em;
+
+		@include media-breakpoint-up(md) {
+			height: 33em;
+			margin-top: -3em;
+			margin-bottom: -10em;
+		}
 	}
 
 	&.oj-scroller-3 {
-		height: 25em;
-		margin-top: -19em;
+
+		@include media-breakpoint-down(sm) {
+			height: 8em;
+			margin-top: -4em;
+		}
+
+		@include media-breakpoint-up(md) {
+			height: 25em;
+			margin-top: -19em;
+		}
 	}
 }
 
 .oj-come-home {
-	margin-top: 5em;
+
+	@include media-breakpoint-down(sm) {
+		margin-top: 2em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: 5em;
+	}
 
 	.oj-heading-col {
 		display: flex;
@@ -401,82 +524,171 @@ main .oj-btn {
 	}
 
 	.oj-copy-col {
-		padding-left: 2em;
+
+		@include media-breakpoint-up(md) {
+			padding-left: 2em;
+		}
 
 		.oj-copy {
-			margin-bottom: 0;
+
+			@include media-breakpoint-up(md) {
+				margin-top: 0;
+			}
 		}
 	}
 }
 
 .oj-visit-hamilton {
-	margin-top: 5em;
+
+	@include media-breakpoint-down(sm) {
+		margin-top: 2em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: 5em;
+	}
 
 	.oj-img-col {
-		margin-top: 6em;
-		padding-right: 3em;
+
+		@include media-breakpoint-up(md) {
+			margin-top: 6em;
+			padding-right: 3em;
+		}
 	}
 
 	.oj-copy-col {
-		margin-top: 5em;
-		padding-left: 5em;
+
+		@include media-breakpoint-down(sm) {
+			margin-top: 2em;
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-top: 5em;
+			padding-left: 5em;
+		}
 
 		.oj-copy {
-			line-height: 1.55;
+
+			@include media-breakpoint-up(md) {
+				line-height: 1.55;
+			}
 		}
 
 		.oj-heading {
-			line-height: 1;
+
+			@include media-breakpoint-up(md) {
+				line-height: 1;
+			}
 		}
 	}
 }
 
 .oj-easy-connections-1 {
 
-	.oj-heading-col {
-		margin-top: 20em;
-
-		.oj-heading {
-			line-height: 1.3;
-		}
+	@include media-breakpoint-down(sm) {
+		margin-top: 2em;
 	}
-	.oj-copy-col {
-		padding-left: 4em;
+
+	.oj-heading-col {
+
+		@include media-breakpoint-up(md) {
+			margin-top: 20em;
+		}
 
 		.oj-img {
-			margin-bottom: 5em;
+
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 2em;
+			}
+		}
+
+		.oj-heading {
+
+			@include media-breakpoint-up(md) {
+				line-height: 1.3;
+			}
+		}
+	}
+
+	.oj-copy-col {
+
+		@include media-breakpoint-up(md) {
+			padding-left: 4em;
+		}
+
+		.oj-img {
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: 5em;
+			}
 		}
 
 		.oj-copy {
-			margin-bottom: 3em;
+
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 2em;
+			}
+
+			@include media-breakpoint-up(md) {
+				margin-bottom: 3em;
+			}
 		}
 	}
 }
 
 .oj-easy-connections-2 {
-	margin-top: 5em;
+
+	@include media-breakpoint-down(sm) {
+		margin-top: 2em;
+	}
+
+	@include media-breakpoint-up(md) {
+		margin-top: 5em;
+	}
 
 	.oj-copy-col {
-		padding-right: 7em;
+
+		@include media-breakpoint-up(md) {
+			padding-right: 7em;
+		}
 
 		.oj-img {
-			margin-top: 3em;
-			margin-left: -8em;
-			width: calc(100% + 8em)
+
+			@include media-breakpoint-up(md) {
+				margin-top: 3em;
+				margin-left: -8em;
+				width: calc(100% + 8em);
+			}
+		}
+	}
+	.oj-img-col {
+
+		@include media-breakpoint-down(sm) {
+			display: none;
 		}
 	}
 }
 
 .oj-register {
-	height: 100vw;
-	background-attachment: scroll, fixed;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1300 1300'%3E%3Cpath fill='%23fff' d='m0 0v1300h1300v-1300zm139.2 352.5 265.7-152.5v91.8l-265.7 152.5zm265.7 745.7h-85.7v-655l85.6-49.2zm278.2 1.8v-89.2c123.7 0 223.9-100.3 223.9-223.9h89.2c0 172.9-140.2 313.1-313.1 313.1zm313.1-439.9-89.2-25.3v-434.8h89.2z'/%3E%3C/svg%3E%0A"), url('../img/bg.svg');
-	background-size: 100vw;
-	background-position: 50% 0;
-	background-repeat: no-repeat;
+
+	@include media-breakpoint-up(md) {
+		height: 100vw;
+		background-attachment: scroll, fixed;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1300 1300'%3E%3Cpath fill='%23fff' d='m0 0v1300h1300v-1300zm139.2 352.5 265.7-152.5v91.8l-265.7 152.5zm265.7 745.7h-85.7v-655l85.6-49.2zm278.2 1.8v-89.2c123.7 0 223.9-100.3 223.9-223.9h89.2c0 172.9-140.2 313.1-313.1 313.1zm313.1-439.9-89.2-25.3v-434.8h89.2z'/%3E%3C/svg%3E%0A"), url('../img/bg.svg');
+		background-size: 100vw;
+		background-position: 50% 0;
+		background-repeat: no-repeat;
+	}
 
 	.oj-form-col {
-		margin-top: 20em;
+
+		@include media-breakpoint-down(sm) {
+			margin-top: 2em;
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-top: 20em;
+		}
 
 		.oj-heading {
 			font-size: 4em;
