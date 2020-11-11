@@ -275,10 +275,6 @@ main {
 	}
 }
 
-.oj-hero {
-	margin-top: 55px;
-}
-
 main .oj-heading {
 	font-family: 'Bebas Neue',sans-serif;
 	font-size: 6em;
@@ -314,6 +310,14 @@ main .oj-btn {
 	&:hover {
 		text-decoration: underline;
 		color: #FA213E;
+	}
+}
+
+.oj-hero {
+	margin-top: 55px;
+
+	.oj-video {
+		width: 100%;
 	}
 }
 
