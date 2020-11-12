@@ -71,10 +71,10 @@ $(function()
 
 	////////////////////////////////////////////////////////////////////////////////
 
-	var $form              = $('#ec-register-form');
+	var $form              = $('#oj-register-form');
 	var $inputs            = $form.find ('.form-control');
 	var $email             = $form.find ('.form-control[name=Email]');
-	var $button            = $form.find ('.ec-btn-submit');
+	var $button            = $form.find ('.oj-btn-submit');
 	var errorState         = false;
 
 	////////////////////////////////////////////////////////////////////////////////
@@ -182,16 +182,14 @@ $(function()
 			timeout: 800000,
 			success: function (data) {
 
-				$('.ec-form-fields').addClass('d-none');
-				$('.ec-form-success').removeClass('d-none');
+				$form.addClass('oj-success');
 
 			},
 			error: function (e) {
 
 				console.log("ERROR : ", e);
 
-				$('.ec-form-fields').addClass('d-none');
-				$('.ec-form-error').removeClass('d-none');
+				$form.addClass('oj-error');
 
 			}
 		});
