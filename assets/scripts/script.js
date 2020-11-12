@@ -257,6 +257,10 @@ $(function()
 			$checkbox.removeClass ('is-valid').addClass ('is-invalid');
 			errorState = true;
 		}
+		else
+		{
+			$checkbox.removeClass ('is-invalid');
+		}
 
 		// if form has errors
 		if (errorState)
