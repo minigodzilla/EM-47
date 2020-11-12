@@ -668,11 +668,10 @@ main .oj-btn {
 .oj-register {
 
 	@include media-breakpoint-up(md) {
-		height: 100vw;
 		background-attachment: scroll, fixed;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1300 1300'%3E%3Cpath fill='%23fff' d='m0 0v1300h1300v-1300zm139.2 352.5 265.7-152.5v91.8l-265.7 152.5zm265.7 745.7h-85.7v-655l85.6-49.2zm278.2 1.8v-89.2c123.7 0 223.9-100.3 223.9-223.9h89.2c0 172.9-140.2 313.1-313.1 313.1zm313.1-439.9-89.2-25.3v-434.8h89.2z'/%3E%3C/svg%3E%0A"), url('../img/bg.svg');
-		background-size: 100vw;
-		background-position: 50% 0;
+		background-size: 110em;
+		background-position: 50% 50%;
 		background-repeat: no-repeat;
 	}
 
@@ -680,10 +679,12 @@ main .oj-btn {
 
 		@include media-breakpoint-down(sm) {
 			margin-top: 2em;
+			margin-bottom: 2em;
 		}
 
 		@include media-breakpoint-up(md) {
-			margin-top: 20em;
+			margin-top: 10em;
+			margin-bottom: 15em;
 		}
 
 		.oj-heading {
