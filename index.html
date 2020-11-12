@@ -311,28 +311,27 @@
 				<div class="col-12 col-md-4 oj-newsletter-col">
 					<h3 class="oj-heading">Newsletter sign up</h3>
 
-					<form>
-						<p class="oj-inline-response d-none">You are now subscribed to our mailing list. For now, please mark <a href="mailto:info@emblemdevcorp.com">info@emblemdevcorp.com</a> as a ‘safe sender’ in your email to be sure you receive future communications.</p>
-						<p class="oj-copy">Sign up now to receive EMBLEM's Newsletter and other information from EMBLEM.</p>
+					<form id="oj-footer-form" action="register.php" method="post">
+						<div class="oj-form-container">
+							<p class="oj-copy">Sign up now to receive EMBLEM's Newsletter and other information from EMBLEM.</p>
 
-						<input type="hidden" id="cid" name="cid" value="22691">
-						<input type="hidden" id="Origin" name="Origin" value="Website Footer">
-						<input type="hidden" class="g-recaptcha" id="recaptcha3" name="g-recaptcha" value="03AGdBq24Aquwu-x4VN2kpuXU-dNkIZ68ymHgn4PB4XfJ5Pf51Wa2dR6HvEvFlvjwVdwtndXDUBiKt8heTjZSa5rC_xP4f3-v4lKVlt9cWY4xRZnz3E-xR2kik2pzTlXygM_oTvwibkmT7wkdY1aLBfWQFu8uZNl7Si0MrLqeMvhI7r50U8I2h7BkKn2EucW9OkK06YWsbHZoDQidKpj3tibcUCoo0bJJa3lkVdhx29h0dR-S79OLqJde2HIfAafEsrjllirGbfiWTTgzGOwjbE-0RTM1wteji1Wli8oEYdjp4nFVGh8NMC6x9PWhXZ1N2fOT8AGPQbFwMHgWptlgKeMvQi7IuNCq5Neq6Y8Nbc4DYCFsRU-VfGy8Pnw8AAszDa3jIHJCXICPDgsHwcORCI5a2_NPRITV3RfKWhaQ51pu0FQEIC1RgqyLoY6ekNBlebpPIi6o_go_0a84Rl-AC8ieTge-KdykWEnkMdItVHHcBEUov55j2VF2RKZQyeJysuJ48SajzL3S1">
+							<input type="hidden" id="cid" name="cid" value="22691">
+							<input type="hidden" id="Origin" name="Origin" value="Website Footer">
 
-						<div class="form-group">
-							<input type="text" class="form-control" id="fEmail" name="Email" placeholder="Email">
-							<small id="v-error-Email" class="invalid-feedback form-text text-danger">Please enter your email address.</small>
+							<div class="form-group">
+								<input type="text" class="form-control" id="fEmail" name="Email" placeholder="Email">
+							</div>
+
+							<div class="form-check">
+								<input class="form-check-input" type="checkbox" value="" id="footerConsent" name="consent">
+								<label class="form-check-label" for="footerConsent">By clicking “SUBMIT” below, I am consenting to receive EMBLEM News through the email address I provide. I understand that I am free to withdraw my consent at any time by clicking on the UNSUBSCRIBE button in the EMBLEM email delivering the EMBLEM News</label>
+							</div>
+
+							<button type="submit" class="btn oj-btn oj-btn-submit">SUBMIT</button>
 						</div>
-
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" value="" id="footerConsent" name="consent">
-							<label class="form-check-label" for="footerConsent">By clicking “SUBMIT” below, I am consenting to receive EMBLEM News through the email address I provide. I understand that I am free to withdraw my consent at any time by clicking on the UNSUBSCRIBE button in the EMBLEM email delivering the EMBLEM News</label>
-						</div>
-
-						<button type="submit" class="btn oj-btn">SUBMIT</button>
-
+						<p class="oj-form-error-container">An error occured. Please try again later.</p>
+						<p class="oj-form-success-container">You are now subscribed to our mailing list. For now, please mark <a href="mailto:info@emblemdevcorp.com">info@emblemdevcorp.com</a> as a ‘safe sender’ in your email to be sure you receive future communications.</p>
 					</form>
-
 				</div>
 			</div>
 

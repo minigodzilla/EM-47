@@ -162,13 +162,115 @@ $(function()
 
 		// now we do ajax
 		// get form
-		var form = $('#ec-register-form')[0];
+		var form = $('#oj-register-form')[0];
 
 		// create an FormData object 
 		var data = new FormData(form);
 
 		// prevent duplicate submissions
-		$('.ec-btn-submit').prop('disabled', true);
+		$form.find('.oj-btn-submit').prop('disabled', true);
+
+		// do a barrel roll
+		$.ajax({
+			type: "POST",
+			enctype: 'multipart/form-data',
+			url: "/register.php",
+			data: data,
+			processData: false,
+			contentType: false,
+			cache: false,
+			timeout: 800000,
+			success: function (data) {
+
+				$form.addClass('oj-success');
+
+			},
+			error: function (e) {
+
+				console.log("ERROR : ", e);
+
+				$form.addClass('oj-error');
+
+			}
+		});
+
+	});
+
+});
+
+
+//----------------------------------------------------------------------------//
+// Footer Mailing List Form                                                   //
+//----------------------------------------------------------------------------//
+
+$(function()
+{
+
+	////////////////////////////////////////////////////////////////////////////////
+
+	var $form              = $('#oj-footer-form');
+	var $email             = $form.find ('.form-control[name=Email]');
+	var $checkbox          = $form.find ('.form-check-input[name=consent]');
+	var $button            = $form.find ('.oj-btn-submit');
+	var errorState         = false;
+
+	////////////////////////////////////////////////////////////////////////////////
+
+	function isEmail(email) {
+
+		var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if(!regex.test(email))
+		{
+			return false;
+		}
+
+		else
+		{
+			return true;
+		}
+	}
+
+	$form.submit (function(e)
+	{
+		// prevent default submit behaviour
+		e.preventDefault();
+
+		// reset error state
+		errorState = false;
+
+		// check whether email is valid
+		if (!isEmail ($email.val()))
+		{
+			$email.removeClass ('is-valid').addClass ('is-invalid');
+			errorState = true;
+		}
+
+		else
+		{
+			$email.removeClass ('is-invalid').addClass ('is-valid');
+		}
+
+		// check whether consent checkbox is checked
+		if ($checkbox.prop('checked')!=true)
+		{
+			$checkbox.removeClass ('is-valid').addClass ('is-invalid');
+			errorState = true;
+		}
+
+		// if form has errors
+		if (errorState)
+			return false;
+
+		// now we do ajax
+		// get form
+		var form = $('#oj-footer-form')[0];
+
+		// create an FormData object 
+		var data = new FormData(form);
+
+		// prevent duplicate submissions
+		$form.find('.oj-btn-submit').prop('disabled', true);
 
 		// do a barrel roll
 		$.ajax({

@@ -723,6 +723,7 @@ main .oj-btn {
 				top: 10em;
 				text-align: center;
 				opacity: 0;
+				pointer-events: none;
 			}
 
 			&.oj-success,
@@ -951,6 +952,27 @@ main .oj-btn {
 
 		.oj-copy {
 			margin-bottom: 0;
+		}
+
+		#oj-footer-form {
+			position: relative;
+
+			.oj-form-error-container,
+			.oj-form-success-container {
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				pointer-events: none;
+			}			
+			&.oj-error .oj-form-container,
+			&.oj-success .oj-form-container {
+				opacity: 0;
+			}			
+			&.oj-error .oj-form-error-container,
+			&.oj-success .oj-form-success-container {
+				opacity: 1;
+			}			
 		}
 
 		.form-control {
