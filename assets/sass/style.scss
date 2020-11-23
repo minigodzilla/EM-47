@@ -918,7 +918,7 @@ main .oj-btn {
 	background-color: #000;
 	color: #fff;
 	font-family: 'helvetica neue',sans-serif;
-	font-size: 1.15em;
+	font-size: 1em;
 	font-weight: 300;
 
 	a {
@@ -948,7 +948,23 @@ main .oj-btn {
 		}
 	}
 
+	.oj-address-col,
+	.oj-contact-col,
+	.oj-newsletter-col {
+		padding-left: 4em;
+		background-position: 2em 0.5em;
+		background-repeat: no-repeat;
+	}
+
+	.oj-address-col {
+		background-image: url('../img/footer-icon-address.svg');
+		background-size: 1.28125em;
+	}
+
 	.oj-contact-col {
+		background-image: url('../img/footer-icon-contact.svg');
+		background-size: 1em;
+
 		.oj-social {
 			margin-top: 1em;
 
@@ -962,6 +978,9 @@ main .oj-btn {
 	}
 
 	.oj-newsletter-col {
+		background-image: url('../img/footer-icon-newsletter.svg');
+		background-size: 1.71875em;
+		padding-left: 4.75em;
 
 		@include media-breakpoint-down(sm) {
 			margin-top: 2em;
@@ -1052,7 +1071,7 @@ main .oj-btn {
 	.oj-copyright-col {
 		margin-top: 2em;
 		margin-bottom: 3em;
-		font-size: 0.7em;
+		font-size: 0.9em;
 	}
 }
 
