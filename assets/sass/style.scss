@@ -188,13 +188,15 @@ h6 {
 }
 
 .oj-btn,
-.oj-btn:hover {
+.oj-btn:hover,
+.oj-btn:focus {
 	background-color: transparent;
 	border-color: transparent;
 	border-radius: 0;
 	border-width: 0;
 	padding: 0;
 	cursor: pointer;
+	box-shadow: none;
 
 	&,
 	&:hover {
@@ -423,6 +425,10 @@ main .oj-btn {
 				font-size: 4em;
 				line-height: 1;
 			}
+		}
+
+		.oj-video {
+			width: 100%;
 		}
 
 		.oj-btn {
