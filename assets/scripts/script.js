@@ -1,3 +1,19 @@
+
+//----------------------------------------------------------------------------//
+// Conversion Tracking                                                        //
+//----------------------------------------------------------------------------//
+$(function()
+{
+
+	$('#oj-register-form .oj-btn-submit').on('click',function() {
+		//gtag('event', 'conversion', {'send_to': 'AW-755396735/ylHBCKzzuZ0BEP_gmegC'});
+		gtag('event', 'Signup', {'event_category': "Conversions", 'event_label': "CompleteRegistration", 'value': "0"});
+		fbq('track', 'CompleteRegistration');
+	});
+
+});
+
+
 //----------------------------------------------------------------------------//
 // Video Container                                                            //
 //----------------------------------------------------------------------------//
