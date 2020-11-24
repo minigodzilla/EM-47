@@ -121,8 +121,11 @@ body {
 	}
 }
 
-a {
+a,
+a:hover,
+a:active {
 	color: inherit;
+	text-decoration: none;
 }
 
 h1,
@@ -243,11 +246,131 @@ h6 {
 		}
 	}
 
+	.oj-hb {
+		position: absolute;
+		left: 20px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+
+		span {
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+
+			&:nth-child(2) {
+				top: 8px;
+			}
+
+			&:nth-child(3) {
+				top: 16px;
+			}
+		}
+	}
+
 	.oj-btn {
 		position: absolute;
-		right: 30px;
-		font-size: 20px;
 		font-weight: 700;
+
+		@include media-breakpoint-down(sm) {
+			right: 20px;
+			font-size: 12px;
+		}
+
+		@include media-breakpoint-up(md) {
+			right: 30px;
+			font-size: 20px;
+		}
+	}
+}
+
+body.nav-open .oj-nav {
+	transform: none;
+}
+
+.oj-nav {
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	left: 0;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: 'helvetica neue',sans-serif;
+	background-color: #000;
+	color: #fff;
+	transform: translateX(-100%);
+	transition: transform ease 200ms;
+
+	@include media-breakpoint-down(sm) {
+		width: 100%;
+		padding: 20px;
+	}
+
+	@include media-breakpoint-up(md) {
+		width: 600px;
+		padding: 50px;
+	}
+
+	.oj-nav-header {
+		text-align: right;
+		margin-bottom: auto;
+
+		.oj-close {
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			cursor: pointer;
+
+			@include media-breakpoint-down(sm) {
+				left: 20px;
+				top: 25px;
+			}
+
+			@include media-breakpoint-up(md) {
+				left: 50px;
+				top: 55px;
+			}
+
+			span {
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				top: 9px;
+				left: 0;
+				background-color: #fff;
+
+				&:nth-child(1) {
+					transform: rotate(45deg);
+				}
+
+				&:nth-child(2) {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+		.oj-slogan {
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+	ul li a {
+		font-weight: 700;
+
+		@include media-breakpoint-down(sm) {
+			font-size: 26.25px;
+			line-height: 70px;
+		}
+
+		@include media-breakpoint-up(md) {
+			font-size: 40px;
+			line-height: 100px;
+		}
+	}
+	.oj-nav-footer a {
+		display: block;
+		font-size: 18px;
 	}
 }
 
