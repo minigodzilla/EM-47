@@ -729,7 +729,7 @@ main .oj-btn {
 	.oj-heading-col {
 
 		@include media-breakpoint-up(md) {
-			margin-top: 20em;
+			margin-top: 17em;
 		}
 
 		.oj-video {
@@ -744,6 +744,7 @@ main .oj-btn {
 
 			@include media-breakpoint-up(md) {
 				line-height: 1.3;
+				font-size: 5.5em;
 			}
 		}
 	}
@@ -752,6 +753,7 @@ main .oj-btn {
 
 		@include media-breakpoint-up(md) {
 			padding-left: 4em;
+			font-size: 0.95em;
 		}
 
 		.oj-video {
@@ -777,22 +779,19 @@ main .oj-btn {
 
 .oj-easy-connections-2 {
 
-	@include media-breakpoint-up(md) {
-		margin-top: 2em;
-	}
-
 	.oj-copy-col {
 
 		@include media-breakpoint-up(md) {
-			padding-right: 7em;
+			font-size: 0.95em;
 		}
 
 		.oj-img {
+			display: block;
 
 			@include media-breakpoint-up(md) {
 				margin-top: 3em;
 				margin-left: -5em;
-				width: calc(80% + 5em);
+				width: calc(65% + 5em);
 			}
 		}
 	}
