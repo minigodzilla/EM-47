@@ -8,6 +8,36 @@ include "lib/email.class.php";
 
 
 
+	$location = 'https://api.spark.re/v1/contacts';
+	$apiKey = 'd9fd7478301691d67ceba9af9737697cd91a8b39';
+
+	$spark = array("contact" => array());
+	$spark["contact"]["first_name"] = $_POST["FirstName"];
+	$spark["contact"]["last_name"] = $_POST["LastName"];
+	$spark["contact"]["email"] = $_POST["Email"];
+	$spark["contact"]["phone"] = $_POST["Phone"];
+	$spark["contact"]["address_line_1"] = $_POST["Address"];
+	$spark["contact"]["postcode"] = $_POST["PostalCode"];
+	$spark["contact"]["agent"] = false;
+	if ($_POST["IsBroker"] == "yes") $spark["contact"]["agent"] = "true";
+	$spark["source"] = "Website";
+
+	$curl = curl_init();
+	curl_setopt($curl, CURLOPT_POST, true);
+	curl_setopt($curl, CURLOPT_HEADER, false);
+	curl_setopt($curl, CURLOPT_URL, $location);
+	curl_setopt($curl,CURLOPT_SSL_VERIFYPEER, false);
+	curl_setopt($curl,CURLOPT_SSL_VERIFYHOST, false);
+	curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($spark));
+	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+	  'Content-Type: application/json',
+	  'Authorization: Token token='.$apiKey
+	));
+	$ret = curl_exec($curl);
+
+	
+
 $data = $_POST;
 $data["IPAddress"] = $_SERVER["REMOTE_ADDR"];
 $data["SourceIP"] = $_SERVER['SERVER_ADDR'] ? $_SERVER['SERVER_ADDR'] : $_SERVER['LOCAL_ADDR'];
