@@ -964,8 +964,8 @@ main .oj-btn:focus {
 				}
 			}
 
-			.oj-form-toggle-input[value='true'] ~ .oj-yes,
-			.oj-form-toggle-input[value='false'] ~ .oj-no {
+			.oj-form-toggle-input[value='yes'] ~ .oj-yes,
+			.oj-form-toggle-input[value='no'] ~ .oj-no {
 				color: $color-accent;
 			}
 		}
