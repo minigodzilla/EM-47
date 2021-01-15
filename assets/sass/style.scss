@@ -488,11 +488,21 @@ main .oj-btn:focus {
 
 .oj-hero {
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(xs) {
 		margin-top: 0.75em;
+
+		a {
+			display: block;
+			margin: 0 -2em;
+
+			.oj-video {
+				width: 125vw;
+				margin-left: -12.5vw;
+			}
+		}
 	}
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(sm) {
 		margin-top: 3.5em;
 	}
 
