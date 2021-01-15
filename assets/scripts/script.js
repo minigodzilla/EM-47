@@ -34,42 +34,6 @@ $(function()
 });
 
 //----------------------------------------------------------------------------//
-// Owl Carousels                                                              //
-//----------------------------------------------------------------------------//
-$(function()
-{
-	
-	$('.ec-art-carousel .ec-carousel').owlCarousel({
-		dots: true,
-		loop: true,
-		nav: true,
-		items: 1
-	});
-
-	$('.ec-reasons .ec-carousel').owlCarousel({
-		margin: 40,
-		dots: false,
-		nav: true,
-		responsive:{
-			0:{
-				items: 1
-			},
-			768:{
-				items: 2,
-				slideBy: 2,
-				smartSpeed: 150
-			},
-			992:{
-				items: 5,
-				slideBy: 5,
-				smartSpeed: 150
-			}
-		}
-	});
-
-});
-
-//----------------------------------------------------------------------------//
 // Register Form                                                              //
 //----------------------------------------------------------------------------//
 
