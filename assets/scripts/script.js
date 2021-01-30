@@ -20,14 +20,14 @@ $(function()
 $(function()
 {
 
-	$('.ec-video-container .ec-video-poster').on('click', function() {
+	$('.oj-video-container .oj-video-poster').on('click', function() {
 
 		var container = $(this).parent();
-		var frame = container.find('.ec-video-frame');
-		var poster = container.find('.ec-video-poster');
+		var frame = container.find('.oj-video-frame');
+		var poster = container.find('.oj-video-poster');
 
-		container.addClass('ec-video-open');
-		frame.prepend('<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/468269570?autoplay=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>');
+		container.addClass('oj-video-open');
+		frame.prepend('<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/500935971?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>');
 
 	})
 
