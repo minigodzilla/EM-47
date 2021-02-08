@@ -410,6 +410,7 @@ main {
 
 	@include media-breakpoint-up(md) {
 		margin-top: 55px;
+		font-size: 0.875em;
 	}
 
 	.container {
@@ -430,10 +431,10 @@ main {
 		}
 
 		.oj-slogan {
-			margin: 2em 2.25em 0 0;
+			margin: 2.75em 2.25em 0 0;
 			font-family: 'helvetica neue',sans-serif;
 			font-size: 1.1em;
-			font-weight: 700;
+			font-weight: 500;
 			line-height: 1;
 		}
 
@@ -538,6 +539,19 @@ main .oj-btn:focus {
 
 	@include media-breakpoint-up(md) {
 		margin-top: 5em;
+	}
+
+	.oj-copy-col {
+		@include media-breakpoint-up(md) {
+			font-size: 0.95em;
+		}
+
+		.oj-btn {
+
+			@include media-breakpoint-down(sm) {
+				margin-bottom: 1em;
+			}
+		}
 	}
 }
 
