@@ -27,7 +27,7 @@
 	/* email */
 	define("EMAIL_FROM", "EMBLEM Developments");
 	define("EMAIL_FROM_ADDRESS", "info@emblemdevcorp.com");
-	define("EMAIL_ADMIN", "lgrecu@thebrandfactory.com");
+	define("EMAIL_ADMIN", "1jarvis@emblemdevcorp.com");
 	define("SENDER_FROM", "email@tbf.email"); # don't change this
 
 	/* standard registration email */
