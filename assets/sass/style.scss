@@ -138,8 +138,9 @@ h6 {
 	margin-bottom: 1rem;
 }
 
-.oj-img ,
-.oj-svg {
+.oj-img,
+.oj-svg,
+.oj-iframe {
 	width: 100%;
 }
 
@@ -787,11 +788,19 @@ main .oj-btn:focus {
 		margin-top: 5em;
 	}
 
+	.oj-iframe-container {
+		padding-top: 31%;
+	}
+
 	.oj-img-col {
 
 		@include media-breakpoint-up(md) {
 			margin-top: 6em;
 			padding-right: 3em;
+		}
+
+		.oj-iframe-container {
+			padding-top: 225%;
 		}
 	}
 
